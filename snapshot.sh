@@ -22,10 +22,10 @@ if [[ -z "$OUTPUT" ]]; then
   help
 fi
 
-mkdir /tmp
+mkdir /snapshots
 
-ssh -o StrictHostKeyChecking=no pi@$PI_ADDRESS "sudo dd if=/dev/mmcblk0 bs=64M status=progress" | dd of=/tmp/pi_clone.img
+ssh -o StrictHostKeyChecking=no pi@$PI_ADDRESS "sudo dd if=/dev/mmcblk0 bs=64M status=progress" | dd of=/snapshots/pi_clone.img
 
-/pishrink.sh -vZa /tmp/pi_clone.img
+/pishrink.sh -vZa /snapshots/pi_clone.img
 
-cp -f /tmp/pi_clone.img.xz $OUTPUT
+cp -f /snapshots/pi_clone.img.xz $OUTPUT
