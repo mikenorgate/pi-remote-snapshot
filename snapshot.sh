@@ -24,4 +24,6 @@ fi
 
 ssh -o StrictHostKeyChecking=no pi@$PI_ADDRESS "sudo dd if=/dev/mmcblk0 bs=64M status=progress" | dd of=/pi_clone.img
 
-/pishrink.sh -vZa /pi_clone.img $OUTPUT
+/pishrink.sh -vZa /pi_clone.img
+
+cp /pi_clone.img $OUTPUT
