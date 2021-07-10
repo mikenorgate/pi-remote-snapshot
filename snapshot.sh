@@ -8,7 +8,7 @@ OUTPUT="${2}"
 help() {
 	local help
 	read -r -d '' help << EOM
-Usage: docker run [-it] --privileged -v <target_dir>:<output_dir> mikenorgate/pi-snapshot pi_address output_file
+Usage: docker run [-it] --privileged --rm -v <target_dir>:<output_dir> mikenorgate/pi-snapshot pi_address output_file
 EOM
 	echo "$help"
 	exit 1
