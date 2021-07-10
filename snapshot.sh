@@ -26,4 +26,4 @@ ssh -o StrictHostKeyChecking=no pi@$PI_ADDRESS "sudo dd if=/dev/mmcblk0 bs=64M s
 
 /pishrink.sh -vZa /pi_clone.img
 
-cp /pi_clone.img $OUTPUT
+cp -f /pi_clone.img $OUTPUT
