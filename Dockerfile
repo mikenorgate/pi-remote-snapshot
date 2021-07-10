@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk upgrade && apk add --no-cache bash openssh-client parted e2fsprogs-extra xz gzip
+RUN apk upgrade && apk add --no-cache bash openssh-client util-linux parted e2fsprogs-extra xz gzip
 
 RUN wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh -O /pishrink.sh && chmod +x /pishrink.sh
 

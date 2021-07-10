@@ -7,5 +7,7 @@ This is a simple docker container to create a disk image from a remote Raspberry
 ## How to run
 
 ```
-docker run [-it] -v <target_dir>:<output_dir> mikenorgate/pi-snapshot pi_address output_file
+docker run [-it] --privileged -v <target_dir>:<output_dir> mikenorgate/pi-snapshot pi_address output_file
 ```
+
+> --privileged is required to allow mounting a loop device
